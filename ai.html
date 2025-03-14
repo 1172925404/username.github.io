@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人空间</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .nav {
+            background-color: #3498db;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #f5f5f5;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .skills {
+            flex: 1;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .interest-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f0f8ff;
+            transition: all 0.3s ease;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .interest-icon {
+            font-size: 24px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .interests-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>欢迎来到我的个人空间</h1>
+            <p>记录生活，分享成长</p>
+            <img src="https://via.placeholder.com/150" alt="我的照片" class="profile-img">
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#interests">兴趣爱好</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="section">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>你好！我是一个热爱生活、追求梦想的人。我喜欢探索新事物，不断学习和成长。在这里，我会分享我的生活点滴、学习心得和兴趣爱好。</p>
+                    <p>我相信，每个人都有自己独特的价值和潜力，只要坚持不懈地努力，就一定能够实现自己的梦想。</p>
+                    <p>欢迎与我交流，一起成长，共同进步！</p>
+                </div>
+                <div class="skills">
+                    <h3>我的技能</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">HTML/CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">设计</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section">
+            <h2 class="section-title">兴趣爱好</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>阅读</h3>
+                    <p>我喜欢阅读各种类型的书籍，从文学到科技，从历史到哲学，阅读让我不断拓宽视野。</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>音乐</h3>
+                    <p>音乐是我生活的重要组成部分，无论是古典音乐还是流行音乐，都能让我沉浸其中，感受美好。</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>摄影</h3>
+                    <p>我喜欢用相机记录生活中的美好瞬间，捕捉那些转瞬即逝的精彩画面。</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>运动</h3>
+                    <p>我热爱运动，尤其是跑步和篮球，运动让我保持健康，也让我更加充满活力。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="contact-info">
+                <h3>联系方式</h3>
+                <p><i class="fas fa-envelope"></i> 邮箱：example@email.com</p>
+                <p><i class="fas fa-phone"></i> 电话：123-456-7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 地址：某市某区某街道</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2023 我的个人空间. 保留所有权利.</p>
+        </footer>
+    </div>
+</body>
+</html>
